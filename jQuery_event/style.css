@@ -1,0 +1,714 @@
+/*standart*/
+* {
+	margin: 0;
+	padding: 0;
+  	border: 0;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	color: #040404;
+}
+
+ul {
+  	list-style-type: none;
+}
+
+li {
+  	cursor: pointer;
+}
+
+p {
+	color: #5e5e5e;
+  	font-size: 18px;
+  	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+img {
+  	max-width:100%;  /*!!!!!!!!!!!!!*/
+}
+
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/*curent*/
+.background {
+  	background: #2e1918;
+}
+
+.background-img {
+	margin: 0 auto;
+	padding: 100px 0 100px 0;
+	max-width: 960px;
+	background: url(img/top_bg.jpg) no-repeat, url(img/repeat_bg.jpg) repeat-y;
+	background-size: contain;
+	box-sizing: border-box;
+}
+
+.container {
+  	margin: 0 auto;
+  	padding: 10px;
+  	border-radius: 10px;
+  	background: #FFF;
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	box-shadow: -10px 10px 10px #140E0E;
+}
+
+.container-top {
+  	border-bottom: 1px solid #C5BFBF;
+  	overflow: hidden;
+}
+
+.container-top-left {
+  	position: relative;
+  	float: left;
+  	width: 49%;
+ 	background: url(img/Dough.png);
+  	background-size: 100%;
+  	background-repeat: no-repeat;
+  	padding-bottom: 460px;
+ 	background-position: 0 0;
+}
+
+.container-top-left > span > img {
+  	display: none;
+}
+
+.background-of-dough {
+  	position: absolute;
+  	left: 10%;
+  	width: 78%;
+}
+
+.container-top-right {
+  	float: left;
+  	margin-left: 2%;
+  	width: 49%;
+  	text-align: center;
+  	box-sizing: border-box;
+}
+
+h1 {
+  	margin: 5px 0 25px 0;
+	  color: #231f20;
+	  font-size: 50px;
+	  font-weight: 700;
+}
+
+.type-of-dough {
+	  text-align: left;
+	  overflow: hidden;
+}
+
+.type-of-dough-text {
+  	float: left;
+}
+
+.type-of-dough-img {
+	  float: right;
+	  width: 70%;
+	  overflow: hidden;
+}
+
+.type-of-dough-img li {
+	  float: left;
+	  display: block;
+	  margin-right: 2%;
+	  width: 32%;
+}
+
+.type-of-dough-img li:last-child {
+  	margin-right: 0;
+}
+
+.type-of-dough-img img {
+  	opacity: 0.5;
+}
+
+.size-of-dough {
+	  margin: 20px 0;
+	  height: 70px;    
+	  text-align: left;
+	  overflow: hidden;
+}
+
+.size-of-dough-text {
+  	float: left;
+}
+
+.size-of-dough-img {
+	  float: right;
+	  margin-right: 22px;
+	  width: 65%;
+	  overflow: hidden;
+}
+
+.size-of-dough-img li {
+	  float: left;
+	  width: 24%;
+	  margin-right: 1%;
+}
+
+.size-of-dough-img li:last-child {
+  	margin-right: 0;
+}
+
+.size-of-dough-show img {
+  	display: none;
+}
+
+.type-of-sauce {
+	  margin-bottom: 20px;
+	  text-align: left;
+	  overflow: hidden;
+}
+
+.type-of-sauce-text {
+  	float: left;
+}
+
+.type-of-sauce-img {
+	  float: right;
+	  width: 70%;
+	  overflow: hidden;
+}
+
+.type-of-sauce-img li {
+	  float: left;
+	  width: 24%;
+	  margin-right: 2px;
+}
+
+.type-of-sauce-img li:last-child {
+  	margin-right: 0;
+}
+
+.type-of-sauce-img img {
+ 		opacity: 0.5;
+}
+
+.container-middle {
+	  overflow: hidden;
+	  border-bottom: 1px solid #C5BFBF;
+}
+
+.container-middle-left {
+	  float: left;
+	  margin: 10px 0;
+	  width: 50%;
+	  box-sizing: border-box;
+	  overflow: hidden;
+}
+
+.type-of-sauce2,
+.container-middle-left>div {
+	  float: left;
+	  width: 24%;
+	  margin-right: 1%;
+	  position: relative;
+}
+
+.container-middle-left>div>img {
+	  display: block;
+	  margin: 0 auto;
+	  cursor: pointer;
+}
+
+.container-middle-left>div>p {
+	  position: relative;
+	  margin-top: -10px;
+	  color: #000000;
+	  font-size: 11px;
+	  font-style: italic;
+	  text-align: center;
+}
+
+.type-of-sauce2>img {
+	  display: block;
+	  margin: -4px auto 0 auto;
+	  cursor: auto;
+}
+
+.type-of-sauce2 form {
+  	margin-top: -15px;
+}
+
+.type-of-sauce2-chahge {
+	  margin-top: -10px;
+	  width: 100%;
+	  font-size: 12px;
+	  outline: none;
+	  font-style: italic;
+	  cursor: pointer;
+}
+
+.container-middle-right {
+	  float: left;
+	  margin: 10px 0;
+	  border-left: 1px solid #C5BFBF;
+	  padding-left: 1%;
+	  width: 50%;
+	  box-sizing: border-box;
+	  overflow: hidden;
+}
+
+.container-middle-right-tabs {
+  	overflow: hidden;
+}
+
+.container-middle-right-tabs li{
+	  float: left;
+	  width: 20%;
+	  text-align: center;
+}
+
+.container-middle-right-tabs-show img,
+.container-middle-right-tabs-hide img {
+	  display: block;
+	  margin: 0 auto;
+}
+
+.container-middle-right-tabs-show img{
+  	display: none;
+}
+
+.box {
+	  overflow: hidden;
+	  display: none;
+}
+
+.box div>div {
+	  float: left;
+	  width: 23%;
+	  margin-right: 2%;
+	  text-align: center;
+	  cursor: pointer;
+}
+
+.box p {
+	  margin: -12px 0 12px 0;
+	  color: #040404;
+	  font-size: 11px;
+	  text-align: center;
+}
+
+.box p:last-child {
+  	color: #5e5e5e;
+}
+
+.box span {
+  	color: #FF0000;
+}
+
+.remove {
+	  position: absolute;
+	  display: inline-block;
+	  right: -2px;
+	  bottom: 2px;
+	  border: 1px solid #FF0000;
+	  width: 13px;
+	  height: 13px;
+	  color: #FF0000;
+	  border-radius: 50%;
+	  font-size: 11px;
+	  text-align: center; 
+	  cursor: pointer;
+}
+
+.increas {
+	  position: absolute;
+	  display: block;
+	  top: 5px;
+	  right: 5px;
+	  background: linear-gradient(#e7061b, #cb0517);
+	  font-size: 12px;
+	  font-weight: bold;
+	  line-height: 24px;
+	  width: 24px;
+	  height: 24px;
+	  color: #ede0d0;
+	  text-align: center;
+	  border: 2px solid #FFF;
+	  border-radius: 50%;
+	  box-shadow: 0 0 10px rgba(0,0,0,.3);
+	  outline: 0;
+}
+
+.container-bottom {
+		padding: 10px;
+		overflow: hidden;
+}
+
+.container-bottom>p {
+		float: left;
+		padding: 4px 10px;
+		width: 25%;
+		border: 1px solid #040404;
+		border-radius: 30px;
+		font-size: 32px;
+		text-shadow: 2px 2px 2px grey;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-align: center;
+		box-sizing: border-box;
+}
+
+.container-bottom>p>a {
+		text-decoration: none;
+		color: #040404;
+}
+
+.container-bottom-reset {
+		background: linear-gradient(to right, #FE720B, #FC964C);
+		box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+}
+
+.container-bottom-reset:hover {
+		border: 1px solid #FFF;
+		background: linear-gradient(to right, #FC964C, #FE720B);
+}
+
+p.container-bottom-price {
+		width: 40%;
+		margin: 0 5%;
+		background: #DDDDDB;
+		border-radius: 10px;	
+}
+
+p.container-bottom-order {
+		background: linear-gradient(to right, #03A00E, #04FB0A);
+		box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+		text-transform: uppercase;
+		font-weight: 800;
+}
+
+.container-bottom-order:hover {
+		border: 1px solid #FFF;
+		background: linear-gradient(to right, #04FB0A, #03A00E);
+}
+
+@media screen and (max-width:860px) {
+	h1 {
+			font-size: 42px;
+	}
+
+	.container-top-left {
+			padding-bottom: 420px;
+	}
+
+	.size-of-dough {
+			height: 65px; 
+	}
+}
+
+@media screen and (max-width:768px) {
+	h1 {
+			font-size: 34px;
+	}
+
+	.container-top-left {
+			padding-bottom: 360px;
+	}
+	
+	.size-of-dough {
+			margin: 10px 0;
+			height: 60px; 
+	}
+
+	.type-of-sauce2,
+	.container-middle-left>div {
+			width: 32%;
+			margin-right: 1%;
+	}
+
+	.box div>div {
+	    width: 32%;
+	    margin-right: 1%;
+	}
+}
+
+@media screen and (max-width:710px) {
+	.container-top-left {
+	  	padding-bottom: 350px;
+	}
+
+	.container-bottom>p {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width:680px) {
+	.container-top-left {
+	  	float: none;
+	  	margin: 0 auto;
+	  	width: 96%;
+	  	padding-bottom: 585px;
+	}
+
+	.container-top-right {
+			float: none;
+			margin: 0 auto;
+			width: 96%;
+	}
+
+	h1 {
+			font-size: 42px;
+	}
+	
+	.size-of-dough {
+			height: 70px; 
+	}
+
+	.container-middle-left {
+			float: none;
+			margin: 20px auto 0 auto;
+			width: 96%;
+			border-right: none !important;
+	}
+
+	.container-middle-left>p {
+			margin-bottom: 10px;
+	}
+
+	.type-of-sauce2,
+	.container-middle-left>div {
+			width: 24%;
+	}
+
+	.container-middle-right {
+			float: none;
+			margin: 20px auto 0 auto;
+			padding-top: 20px;
+			border-left: none !important;
+			border-top: 1px solid #C5BFBF;
+			width: 96%;
+	}
+
+	.container-middle-right>p {
+			margin-bottom: 10px;
+	}
+
+	.box div>div {
+	    width: 24%;
+	    margin-right: 1%;
+	}
+
+	.container-bottom>p {
+			font-size: 27px;
+	}
+
+@media screen and (max-width:640px) {
+	.container-top-left {
+	  	padding-bottom: 565px;
+	}
+
+@media screen and (max-width:600px) {
+	.container-top-left {
+	  	padding-bottom: 545px;
+	}
+
+	h1 {
+			font-size: 40px;
+	}
+
+	.container-bottom>p {
+			font-size: 23px;
+	}
+}
+
+@media screen and (max-width:560px) {
+	.container-top-left {
+	  	padding-bottom: 525px;
+	}
+
+	h1 {
+			font-size: 36px;
+	}
+}
+
+@media screen and (max-width:530px) {
+	.container-top-left {
+	  	padding-bottom: 500px;
+	}
+
+	h1 {
+			font-size: 33px;
+	}
+
+	.container-bottom>p {
+			font-size: 21px;
+	}
+}
+
+@media screen and (max-width:515px) {
+	.container-top-left {
+	  	padding-bottom: 475px;
+	}
+
+@media screen and (max-width:500px) {
+	.container-top-left {
+	  	padding-bottom: 450px;
+	}
+
+	h1 {
+			font-size: 32px;
+	}
+
+	.container-bottom>p {
+			font-size: 19px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.container-top-left {
+	  	padding-bottom: 420px;
+	}
+}
+
+@media screen and (max-width:460px) {
+	.container-top-left {
+	  	padding-bottom: 400px;
+	}
+
+	h1 {
+			font-size: 28px;
+	}
+
+	.container-bottom>p {
+			font-size: 17px;
+	}
+}
+
+@media screen and (max-width:420px) {
+	.container-top-left {
+	  	padding-bottom: 380px;
+	}
+
+	.container-bottom>p {
+			font-size: 16px;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.container-top-left {
+	  	padding-bottom: 360px;
+	}
+
+	h1 {
+			font-size: 26px;
+	}
+
+	.type-of-sauce2,
+	.container-middle-left>div {
+			width: 32%;
+	}
+
+	.remove {
+			width: 20px;
+			height: 20px;
+			font-size: 18px;
+	}
+
+	.increas {
+			font-size: 14px;
+			line-height: 28px;
+			width: 28px;
+			height: 28px;
+	}
+
+	.box {
+			margin-top: 10px;
+	}
+
+	.box div>div {
+	    width: 32%;
+	}
+
+
+	.container-bottom>p {
+			font-size: 14px;
+	}
+}
+
+@media screen and (max-width:380px) {
+	.container-top-left {
+	  	padding-bottom: 340px;
+	}
+
+	h1 {
+			font-size: 24px;
+	}
+
+	.size-of-dough {
+			height: 55px; 
+	}
+}
+
+@media screen and (max-width:360px) {
+	.container-top-left {
+	  	padding-bottom: 300px;
+	}
+
+	h1 {
+			font-size: 26px;
+	}
+
+	.size-of-dough {
+			height: 50px; 
+	}
+
+	.type-of-sauce2,
+	.container-middle-left>div {
+			width: 48%;
+	}
+
+	.box div>div {
+	    width: 48%;
+	}
+
+	.container-bottom>p {
+			float: none;
+			margin: 0 auto 15px auto;
+			width: 95%;
+			font-size: 20px;
+	}
+}
+
+@media screen and (max-width:340px) {
+	.container-top-left {
+	  	padding-bottom: 280px;
+	}
+
+	h1 {
+			font-size: 26px;
+	}
+
+	.container-bottom>p {
+			font-size: 20px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.container-top-left {
+	  	padding-bottom: 260px;
+	}
+
+	.size-of-dough {
+			height: 45px; 
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

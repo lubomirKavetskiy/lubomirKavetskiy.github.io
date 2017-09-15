@@ -1,0 +1,19 @@
+@charset "utf-8";
+.contact-map {
+  padding: 20px 0;
+  background-color: #FFF;
+}
+
+.map-wrap {
+  height: 387px;
+  position: relative;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

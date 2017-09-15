@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+.why-you-choose-us {
+  background: url("../img/why-you-choose-us_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 51px 0 47px 0;
+  position: relative;
+  background-attachment: fixed;
+
+  & .why-you-choose-us__magazines {
+    position: absolute;
+    top: 204px;
+    right: 0;
+    //z-index: 999;
+  }
+
+  & h2 {
+    margin-top: 0;
+    margin-bottom: 80px;
+    color: #FFF;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  &__left-part {
+    margin-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+
+    & .why-you-choose-us__article:first-child {
+      //margin-bottom: 60px;
+
+      margin-bottom: 45px;
+    }
+  }
+
+  &__right-part {
+    padding-left: 0;
+    padding-right: 0;
+
+    & .why-you-choose-us__article:first-child {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.why-you-choose-us__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  & img {
+    margin-top: 3px;
+    //width: 73px;
+
+    width: 92px;
+
+  }
+
+  & .why-you-choose-us__text {
+    margin-left: 20px;
+    text-align: left;
+
+    & h4 {
+      margin-top: 0;
+      text-transform: uppercase;
+      font-size: 20px;
+      color: #ecdd13;
+    }
+
+    & p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #f4f4f4;
+      text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.55);
+    }
+  }
+}
+
+.why-you-choose-us__right-part {
+  & .why-you-choose-us__text {
+    margin-left: 25px;
+  }
+  & .last {
+    margin-left: 38px;
+  }
+}
+
+#bulb {
+  position: relative;
+  right: 10px;
+}
+
+@include adaptive(max1700) {
+  .why-you-choose-us .why-you-choose-us__magazines{
+    top: 325px;
+    width: 300px;
+  }
+}
+
+@include adaptive(max1500) {
+  .why-you-choose-us .why-you-choose-us__magazines{
+    top: 375px;
+    width: 240px;
+  }
+}
+
+@include adaptive(max1199) {
+  .why-you-choose-us {
+    background-position: 70% 0;
+
+    & h2 {
+      margin-bottom: 60px;
+    }
+
+    & .why-you-choose-us__magazines {
+      top: 405px;
+      width: 220px;
+    }
+
+    & .why-you-choose-us__article:first-child {
+      margin-bottom: 28px;
+    }
+  }
+
+  .why-you-choose-us__left-part .why-you-choose-us__article:first-child {
+    margin-bottom: 62px;
+  }
+}
+
+@include adaptive(max991) {
+  .why-you-choose-us {
+    padding: 40px 0 53px 0;
+
+    & h2 {
+      margin-bottom: 50px;
+    }
+
+    & .why-you-choose-us__magazines {
+      top: 405px;
+      width: 210px;
+    }
+  }
+
+  .why-you-choose-us__article {
+    margin-bottom: 0;
+
+    & .why-you-choose-us__text {
+      margin-left: 15px;
+
+      & h4 {
+        font-size: 18px;
+        color: #ecdd13;
+      }
+
+      & p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .our-company-is {
+    padding: 70px 0 90px;
+  }
+
+  .our-company-is p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .why-you-choose-us__left-part .why-you-choose-us__article:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+@include adaptive(max767) {
+  .why-you-choose-us {
+    background-position: 70% 0;
+    padding: 35px 0 10px 0;
+
+    & h2 {
+      margin-bottom: 40px;
+    }
+
+    & .why-you-choose-us__magazines {
+      //top: 75%;
+      //width: 190px;
+
+      display: none;
+    }
+
+    &  .why-you-choose-us__article:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  .why-you-choose-us__left-part {
+    margin-right: 0;
+  }
+
+  .why-you-choose-us__article {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    & img {
+      width: 70px;
+    }
+
+    & h4 {
+      font-size: 16px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  }
+
+  #bulb {
+    right: 0;
+  }
+}
+
+
+
+@include adaptive(max480) {
+  .why-you-choose-us {
+    background-position: 60% 0;
+
+    & h2 {
+      margin-bottom: 30px;
+    }
+
+    & .why-you-choose-us__magazines {
+      top: 87%;
+      width: 130px;
+    }
+  }
+
+  .why-you-choose-us {
+    padding: 25px 0 5px 0;
+  }
+
+  .why-you-choose-us__article {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+    & img {
+      margin-bottom: 30px;
+      width: 120px;
+    }
+
+    & h4 {
+      font-size: 15px;
+    }
+
+    & .why-you-choose-us__text {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    & p {
+      font-size: 15px;
+      line-height: 1.3;
+    }
+  }
+}
+
+
+
+

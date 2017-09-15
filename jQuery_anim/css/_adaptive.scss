@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@mixin adaptive($media) {
+  //WIDTH:
+
+  // special small devices:
+  @if $media == max480 {
+    @media screen and (max-width:480px) {@content}
+  }
+    // extra small devices:
+  @else if $media == max767 {
+    @media screen and (max-width:767px) {@content}
+  }
+    // for navigation:
+  @else if $media == min768 {
+    @media screen and (min-width:768px) {@content}
+  }
+    // small devices:
+  @else if $media == max991 {
+    @media screen and (max-width:991px) {@content}
+  }
+    // medium devices:
+  @else if $media == max1199{
+    @media screen and (max-width:1199px) {@content}
+  }
+    // large devices:
+  @else if $media == min1200 {
+    @media screen and (min-width:1200px) {@content}
+  }
+
+  @else if $media == max1500{
+    @media screen and (max-width:1500px) {@content}
+  }
+
+  @else if $media == max1700{
+    @media screen and (max-width:1700px) {@content}
+  }
+
+  //HEIGHT
+  @if $media == maxHeight280 {
+    @media screen and (max-height:280px) {@content}
+  }
+}

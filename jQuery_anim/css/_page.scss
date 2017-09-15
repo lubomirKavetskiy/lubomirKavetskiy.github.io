@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+$fontBody: 'Montserrat-Regular', sans-serif;
+body {
+  font-family: $fontBody;
+}
+
+.page {
+  min-width: 320px;
+ }
+
+@include adaptive(max767) {
+  h2 {
+    padding: 0 15px;
+  }
+
+  .our-company-is h2 {
+    padding: 0;
+  }
+}

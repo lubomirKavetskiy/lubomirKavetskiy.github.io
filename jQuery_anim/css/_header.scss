@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.header {
+  background-image: url("../img/header_bg.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 12px;
+  padding-bottom: 127px;
+
+  &__logo img {
+    margin-top: 10px;
+    width: 264px;
+  }
+}
+
+.switch-language {
+  position: relative;
+  top: 30px;
+  right: 73px;
+}
+
+.language-wrap {
+    width: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    padding: 5px 18px 4px 10px;
+    z-index: 99;
+    text-align: left;
+}
+
+.language__nav {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+
+  &:hover {
+    opacity: .7;
+    text-decoration: none;
+  }
+}
+
+.fa-chevron-down {
+  position: relative;
+  left: 10px;
+  bottom: 3px;
+  display: inline;
+  font-size: 15px;
+  opacity: 1!important;
+}
+
+h1 {
+  margin-top: 249px;
+  margin-bottom: 226px;
+  font-size: 54px;
+  color: #FFF;
+  text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  line-height: 1.35;
+  letter-spacing: 2.6px;
+}
+
+.btn-get-to-know {
+  padding: 20px 102px;
+  font-size: 28px;
+  border-radius: 40px;
+}
+
+@include adaptive(max991) {
+  .header {
+    padding-bottom: 70px;
+  }
+
+  h1 {
+    margin-top: 160px;
+    margin-bottom: 110px;
+    font-size: 40px;
+  }
+
+  .btn-get-to-know {
+    padding: 13px 70px;
+    font-size: 22px;
+  }
+}
+
+@include adaptive(max767) {
+  .header {
+    padding-bottom: 50px;
+  }
+
+  .header > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  h1 {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    font-size: 36px;
+  }
+
+  .btn-get-to-know {
+    padding: 11px 65px;
+    font-size: 20px;
+  }
+}
+
+@include adaptive(max480) {
+  .header {
+    background-position: 20% 0;
+    padding-bottom: 30px;
+  }
+
+  .header__logo img {
+    margin-top: 5px;
+    position: absolute;
+    left: 14px;
+    width: 60%;
+  }
+
+  .switch-language {
+    top: 35px;
+    right: 68px;
+  }
+
+  .language-wrap {
+    width: 68px;
+    top: -12px;
+  }
+  .language__nav {
+    font-size: 15px;
+  }
+
+  .fa-chevron-down {
+    bottom: 1px;
+  }
+
+  .btn-get-to-know {
+    padding: 10px 60px;
+    font-size: 16px;
+  }
+
+  h1 {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    font-size: 30px;
+  }
+}
+
