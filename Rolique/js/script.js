@@ -19,21 +19,18 @@ function wowStart() {
     new WOW().init();
 }
 
-// function handlePreloader(timeIterPreloader, mobile) {
 function handlePreloader(timeIterPreloader) {
     if ($('.preloader').length) {
-        $('.preloader__logo-box').delay(timeIterPreloader - 500).fadeOut(500
-            // , function() {fullpageStart();}
-        );
+        $('.preloader__logo-box').delay(timeIterPreloader-400).fadeOut(600);
         $('.preloader').delay(timeIterPreloader).fadeOut(700);
 
         setTimeout(function() {wowStart()}, timeIterPreloader);
 
         // WOW.js (Animate on scroll library) https://github.com/matthieua/WOW
-        // if (!mobile) {
-            fullpageStart();
 
-        // }
+        setTimeout(function() {fullpageStart();}, timeIterPreloader);
+
+
 
 
 
@@ -62,8 +59,6 @@ function handlePreloader(timeIterPreloader) {
 // ====== fixed navigation ======= //
 function fixedNavigation(valueScroll) {
     if($(".header").length) {
-        console.log($(window).width());
-
 
         var tempScrollTop,
             currentScrollTop = 0;
@@ -72,7 +67,7 @@ function fixedNavigation(valueScroll) {
 
             currentScrollTop = $(this).scrollTop();
 
-            if ((tempScrollTop < currentScrollTop) && (currentScrollTop > valueScroll)) {
+            if ((tempScrollTop < currentScrollTop) && (currentScrollTop > valueScroll) && ($(window).width() < 768)) {
                 $(".header").slideUp(300, function() {
                     $(".header").stop(true, true);
                 });
@@ -82,9 +77,6 @@ function fixedNavigation(valueScroll) {
             }
             tempScrollTop = currentScrollTop;
         });
-    }
-    else {
-        return false
     }
 }
 
@@ -97,13 +89,18 @@ function toggleNavigation() {
         const $this = $(this);
 
         $this.toggleClass('active');
-        $('.navigation__list').toggleClass('fadeIn-Flex');
+        $('.navigation__list').toggleClass('fadeIn-flex');
         $('.header').toggleClass('backgroundHeader-fadeIn');
+        $('.navigation__item a').css({'color': '#FFF'});
 
         $(".navigation__hamburger").hasClass("active") ?
-            $('body, html').css({'overflow':'hidden'})
+            $('body, html').each(function () {
+                this.style.setProperty('overflow', 'hidden', 'important');
+            })
             :
-            $('body, html').css({'overflow':'visible'})
+            $('body, html').each(function () {
+                this.style.setProperty('overflow', 'visible', 'important');
+            })
     });
 
     $(".navigation__list a, .logo").click(function () {
@@ -115,8 +112,26 @@ function toggleNavigation() {
 // ================================ //
 
 
+// ====== delete ScrollBar ======= //
+function deleteScrollBar() {
+    $('body, html').each(function () {
+        this.style.setProperty('overflow', 'hidden', 'important');
+    });
+}
+// ================================ //
+
+
+// ====== add ScrollBar ======= //
+function addScrollBar() {
+    $('body, html').each(function () {
+        this.style.setProperty('overflow', 'visible', 'important');
+    });
+}
+// ================================ //
+
 // fullPage.js (Full screen pages library) https://github.com/alvarotrigo/fullPage.js
 function fullpageStart() {
+    console.log('start');
     $('#fullpage').fullpage({
         //Navigation
         menu: '#menu',
@@ -136,13 +151,82 @@ function fullpageStart() {
                 var leavingSection = $(this);
 
                 if (nextIndex == 2) {
-                    $('.second-page__img').toggleClass('fadeInDown');
+                    $('.second-page__img').addClass('fadeIn');
+                    setTimeout(function () {
+                        $('.second-page__img').addClass('slide-top');
+                    }, 1000);
+
+                    $('.second-page__text').addClass('fadeIn');
+
                     console.log(2);
                 }
+
+                else if (nextIndex == 3) {
+                    $('.third-page .section__container').addClass('fadeInDown');
+                }
+
+                else if (nextIndex == 4) {
+                    $('.header').addClass('backgroundTransparent');
+                    $('.logo').css({"background-position": "bottom center"});
+
+                    if($('.fourth-page__second-half').hasClass('slide-left-from-side')) {
+                        $('.navigation__item a').css({'color': '#FFF'});
+                    } else {
+                        $('.navigation__item a').css({'color': '#666'});
+                    }
+
+                    // $('.navigation__item a').css({'color': '#666'});
+                    $('.fourth-page__first-half').addClass('fadeIn-flex');
+                    setTimeout(function() {
+                        $('.fourth-page__first-half').addClass('slide-left-from-center');
+                    }, 1000);
+
+                    $('.fourth-page__second-half').addClass('slide-left-from-side', function() {
+                        setTimeout(function() {$('.navigation__item a').css({'color': '#FFF'});}, 2000);
+                    });
+                    setTimeout(function() {
+                        $('.contact-form').addClass('fadeIn-flex');
+                    }, 3100);
+
+                }
+
+
+
+
+        },
+
+
+        afterLoad: function(anchorLink, index) {
+            var loadedSection = $(this);
+
+            //using index
+            if (index == 1 || index == 2 || index == 3) {
+                $('.header').removeClass('backgroundTransparent');
+                $('.logo').css({"background-position": "top center"});
+                $('.navigation__item a').css({'color': '#FFF'});
+            }
+        },
+
+
+        // afterResize: function(){
+        //     var pluginContainer = $(this);
+        //     alert("The sections have finished resizing");
+        // },
+
+        afterResponsive: function(isResponsive){
+            if(isResponsive) {
+                fixedNavigation(100);
+            }
+
+            if(isResponsive) {
+                if($(".navigation__hamburger").hasClass("active")) {
+                   deleteScrollBar();
+                }
+                else {
+                    addScrollBar();
+                }
+            }
         }
-
-
-
     });
 }
 // ================================ //
@@ -155,17 +239,16 @@ function fullpageStart() {
 
 // DOCUMENT READY
 $(document).ready(function () {
-    var mobile;
 
-    ($(window).width() < 768) ? mobile = true : mobile = false;
+
+    // var mobile;
+    //
+    // ($(window).width() < 768) ? mobile = true : mobile = false;
 
 
     $(".preloader__logo-box>img").fadeIn(2000);
 
     animatingReloader();
-
-    // if(mobile) fixedNavigation(100);
-    // fixedNavigation(100);
 
     toggleNavigation();
 });
@@ -183,28 +266,14 @@ $(window).on("load", function () {
 
     handlePreloader(5500);
 
-    // $(window).resize(function() {
-    //     console.log('m', mobile);
-    // });
-
 });
 // ================================ //
 
 // WINDOW RESIZE
 $(window).resize(function() {
-     // var curWidth = $(window).width()
-    // var a = $(window).width();
-    //
-    // if($(window).width() < 768) fixedNavigation(100);
 
-    // if(a > 768) {
-        var a = $(window).width();
-        if(a<767) {
-            fixedNavigation(100)
-        } else {
-            fixedNavigation(10000)
-        };
-    // }
+
+
 });
 // ================================ //
 
