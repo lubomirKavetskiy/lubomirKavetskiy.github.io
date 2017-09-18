@@ -126,10 +126,7 @@ function fullpageStart() {
         //Events
         onLeave: function (index, nextIndex, direction) {
                 var leavingSection = $(this);
-                if (index == 1 || index == 2 || index == 3 || index == 4) {
-                    $('.section').css({'height':'100vh'});
-                }
-                
+
                 if (nextIndex == 2) {
                     $('.second-page__img').addClass('fadeIn');
                     setTimeout(function () {
@@ -137,6 +134,8 @@ function fullpageStart() {
                     }, 1000);
 
                     $('.second-page__text').addClass('fadeIn');
+
+                    $('.second-page').scrollTop(100vh);
                 }
 
                 else if (nextIndex == 3) {
