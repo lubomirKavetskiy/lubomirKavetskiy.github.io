@@ -134,9 +134,6 @@ function fullpageStart() {
                     }, 1000);
 
                     $('.second-page__text').addClass('fadeIn');
-
-                    var windowHeight = $(window).height();
-                    $('.second-page').scrollTop(windowHeight);
                 }
 
                 else if (nextIndex == 3) {
