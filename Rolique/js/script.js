@@ -126,7 +126,10 @@ function fullpageStart() {
         //Events
         onLeave: function (index, nextIndex, direction) {
                 var leavingSection = $(this);
-
+                if (index == 1 || index == 2 || index == 3 || index == 4) {
+                    $('.section').css({'height':'100vh'});
+                }
+                
                 if (nextIndex == 2) {
                     $('.second-page__img').addClass('fadeIn');
                     setTimeout(function () {
@@ -171,10 +174,6 @@ function fullpageStart() {
                 $('.header').removeClass('backgroundTransparent');
                 $('.logo').css({"background-position": "top center"});
                 $('.navigation__item a').css({'color': '#FFF'});
-            }
-
-            if (index == 2 || index == 3) {
-                $('.section').css({'height':'100vh'});
             }
         },
 
