@@ -172,6 +172,10 @@ function fullpageStart() {
                 $('.logo').css({"background-position": "top center"});
                 $('.navigation__item a').css({'color': '#FFF'});
             }
+
+            if (index == 2 || index == 3) {
+                $('.section').css({'height':'100vh'});
+            }
         },
 
         afterResponsive: function(isResponsive){
@@ -195,9 +199,6 @@ function fullpageStart() {
 
 // === DOCUMENT READY === //
 $(document).ready(function () {
-    var windowsHeight = $(window).height();
-    $('.section').css('height', windowsHeight + 'px');
-   
     $(".preloader__logo-box>img").fadeIn(2000);
 
     animatingReloader();
