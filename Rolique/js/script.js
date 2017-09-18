@@ -121,6 +121,7 @@ function fullpageStart() {
         sectionsColor: ['transparent', '#212121', 'transparent', '#FFF'],
         responsiveWidth: 768,
         scrollBar: true,
+        verticalCentered: true,
 
         //Events
         onLeave: function (index, nextIndex, direction) {
