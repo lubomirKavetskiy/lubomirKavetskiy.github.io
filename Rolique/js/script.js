@@ -195,7 +195,9 @@ function fullpageStart() {
 
 // === DOCUMENT READY === //
 $(document).ready(function () {
-
+    var windowsHeight = $(window).height();
+    $('.section').css('height', windowsHeight + 'px');
+   
     $(".preloader__logo-box>img").fadeIn(2000);
 
     animatingReloader();
