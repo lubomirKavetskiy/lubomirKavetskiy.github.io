@@ -135,7 +135,8 @@ function fullpageStart() {
 
                     $('.second-page__text').addClass('fadeIn');
 
-                    $('.second-page').scrollTop(100vh);
+                    var windowHeight = $(window).height();
+                    $('.second-page').scrollTop(windowHeight);
                 }
 
                 else if (nextIndex == 3) {
